@@ -1,7 +1,15 @@
-const router = require('express').Router();
-const userControllers = require('../controllers/userController');
+// const router = require('express').Router();
 
-router.get('/users', userControllers.getUser);
-router.post('/users',userControllers.createUser);
+import {Router} from 'express'
+const router = Router();
 
-module.exports = router;
+// const userControllers = require('../controllers/userController');
+
+import {getUser,createUser} from '../controllers/userController.js'
+
+router.get('/users', getUser);
+router.post('/users',createUser);
+
+export default router;
+
+// module.exports = router;

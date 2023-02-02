@@ -1,14 +1,15 @@
 const Users =[];
 let currentId = 1 ;
-const getUserService = async() => {
+
+export const getUserService = async() => {
     return Users;
 };
-const createUserService = async(userDetails) => {
+export const createUserService = async(userDetails) => {
     const user = {id:currentId++, ...userDetails};
     Users.push(user);
     return user;
 };
-module.exports = {
-    getUserService,
-    createUserService,
-};
+// module.exports = {
+//     getUserService,
+//     createUserService,
+// };
